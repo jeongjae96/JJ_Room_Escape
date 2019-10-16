@@ -134,7 +134,6 @@ living_room.entrance_door.onClick = function()
   {
     playSound("footstep.wav")
     game.move(white_room)
-    playSound("heart_rate.wav")
     showImageViewer("에필로그.png", "")
   }
   else if (living_room.entrance_door.isLocked())
@@ -243,8 +242,13 @@ corridor.door1.onClick = function()
     if (kids_room.door.isLocked())
     {
       printMessage("(문이 잠기며) 어...? 아이의 방이다...")
+      playSound("door_close.wav")
     }
-    playSound("footstep.wav")
+    else 
+    {
+      playSound("footstep.wav")
+    }
+    
     game.move(kids_room)
   }
 }
@@ -627,7 +631,7 @@ white_room.door = white_room.createObject("door", "문2-열림.png") // 문 생�
 
 white_room.door.onClick = function()
 {
-  playSound("footstep.wav")
+  playSound("heart_rate.wav")
   game.clear()
 }
 
