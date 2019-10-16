@@ -349,17 +349,16 @@ kids_room.locateObject(kids_room.notebook, 265, 355)
 
 kids_room.notebook.onClick = function()
 {
+  playSound("click.wav")
   showImageViewer("일기.png", "")
 
   if (kids_room.notebook.isClosed())
   {
-    playSound("click.wav")
     kids_room.notebook.open()
     printMessage("아이의 일기인가...?")
   }
   else if (kids_room.notebook.isOpened())
   {
-    playSound("click.wav")
     kids_room.notebook.lock()
     printMessage("어린이날을 무척 좋아하나보군...")
   }
@@ -545,12 +544,11 @@ kids_room.locateObject(kids_room.bag, 485, 550)
 
 kids_room.bag.onClick = function()
 {
-  // playSound("click.wav")
+  playSound("click.wav")
   showImageViewer("문제2.png")
 
   if (kids_room.bag.isClosed())
   {
-    playSound("click.wav")
     kids_room.bag.open()
     printMessage("가방 안에도 문제가 있다.")
   }
