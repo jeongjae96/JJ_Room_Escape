@@ -510,18 +510,20 @@ desk_drawer.locateObject(desk_drawer.prob3, 600, 420)
 
 desk_drawer.prob3.onClick = function()
 {
-  // playSound("click.wav")
+  playSound("click.wav")
   if (desk_drawer.prob3.isClosed())
   {
-    playSound("click.wav")
     desk_drawer.prob3.open()
     printMessage("음... 원의 넓이를 구하면 되려나...?")
   }
   else if (desk_drawer.prob3.isOpened())
   {
-    playSound("click.wav")
     desk_drawer.prob3.lock()
     printMessage("초록 부분을 제외하고 구하면 되겠군...")
+  }
+  else
+  {
+    printMessage("초록 부분을 뺀 원의 넓이를 구해보자.")
   }
 }
 
